@@ -1,0 +1,317 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-image: url("/images/Vector_2646.jpg");
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#listMain{
+	width: 100vw;
+	height: 100vh;
+	min-height: 540px;
+	min-width: 1200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.listHost{
+	width: 65%;
+	height: 90%;
+	/* superior | direita | inferior | esquerda */
+	margin: 0px 0px 0px 60px;
+	background-color: rgba(0, 0, 0, 0.705);
+	box-shadow: 3px 3px 1em rgb(70, 70, 70);
+}
+
+.listHost #lista-principal{
+	overflow-y: auto;
+	height: 90%;
+	/*Estilizando a barra de rolagem no firefox*/
+	scrollbar-width: thin;          /* "auto" or "thin" */
+	scrollbar-color: rgba(119, 119, 179, 0.705) rgba(0, 0, 0, 0.705);   /* scroll thumb and track */
+}
+
+/*Estilizando a barra de rolagem no Chrome, Edge e Safari*/
+.listHost #lista-principal::-webkit-scrollbar {
+	width: 8px;               /* width of the entire scrollbar */
+}
+
+.listHost #lista-principal::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.705);        /* color of the tracking area */
+}
+
+.listHost #lista-principal::-webkit-scrollbar-thumb {
+	background-color: rgba(119, 119, 179, 0.705);    /* color of the scroll thumb */
+}
+
+input[type="checkbox"]:checked + ul{
+	display: block;
+}
+
+.listHost .itemListHost{
+	list-style: none;
+	/* superior | direita | inferior | esquerda */
+	margin: 10px 30px 0px 30px;
+	padding: 5px 0px 5px 0px;
+	border-radius: 5px;
+	box-shadow: 0 0 6px 2px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.listHost .itemListHost span{
+	display: inline-block;
+}
+
+.iconExpande{
+	color: black;
+	/* superior | direita | inferior | esquerda */
+	cursor: pointer;
+	width: 5%;
+	text-align: center;
+}
+
+.iconNone{
+	color: black;
+	/* superior | direita | inferior | esquerda */
+	width: 5%;
+	text-align: center;
+}
+
+.listHost .itemListHost .pingServer{
+	text-align: center;
+	width: 15%;
+}
+
+.listHost .itemListHost .nomeServer{
+	width: 30%;
+}
+
+.listHost .itemListHost .ipServer{
+	width: 25%;
+}
+
+.listHost .itemListHost .linkVerMais{
+	display: inline-block;
+	width: 20%;
+	text-align: end;
+	color: #03111E;
+}
+
+.listHost .itemListHost .linkVerMais:hover{
+	color: #5400f0;
+}
+
+.checkExpande{
+	display: none;
+}
+
+.listHost .itemListHost ul{
+	display: none;
+}
+
+.hostOff{
+	background-color: rgb(255, 46, 46);
+}
+
+.hostOn{
+	background-color: rgb(0, 250, 0);
+}
+
+.hostAlert{
+	background-color: rgb(255, 255, 0);
+}
+
+#addHost{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+	background-color: #03111E;
+	width: 70px;
+	height: 100px;
+	position: absolute;
+	top: 80%;
+	border-radius: 0 50px 50px 0;
+	box-shadow: 3px 3px 1em rgb(70, 70, 70);
+	z-index: 999;
+}
+
+#addHost:hover{
+	width: 80px;
+	transition: 0.3s;
+}
+
+#addHost a{
+	color: white;
+	padding: 15px;
+}
+
+#divTodosInformativos{
+	width: 25%;
+	height: 90%;
+	/* superior | direita | inferior | esquerda */
+	margin: 0px 0px 0px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.divInformativoUm{
+	width: 100%;
+	height: 50%;
+	background-color: rgba(0, 0, 0, 0.705);
+	margin-bottom: 10px;
+	box-shadow: 3px 3px 1em rgb(70, 70, 70);
+	display: flex;
+	flex-direction: row;
+	color: white;
+	font-size: 23px;
+}
+.divInformativoUm .quantidadeInformativo{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+	height: 100%;
+	width: 70%;
+}
+
+.divInformativoUm .quantidadeInformativo span{
+	display: flex;
+	height: 60px;
+	margin: 5px;
+	align-items: center;
+}
+
+.divInformativoUm .quantidadeInformativo p{
+	margin-right: 10px;
+}
+
+.divInformativoUm .iconesInformativo{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 30%;
+}
+
+.divInformativoUm .iconesInformativo i{
+	display: flex;
+	height: 60px;
+	margin: 5px;
+	align-items: center;
+}
+
+.divInformativoUm .conAtivas{
+	color: rgb(0, 250, 0);
+}
+
+.divInformativoUm .conPerdidas{
+	color: rgb(255, 46, 46);
+}
+
+.divInformativoUm .conTotal{
+	color: blue;
+}
+
+.divInformativoUm div i{
+	font-size: 35px;
+}
+
+.divInformativoDois{
+	width: 100%;
+	height: 50%;
+	margin-top: 10px;
+	background-color: rgba(0, 0, 0, 0.705);
+	box-shadow: 3px 3px 1em rgb(70, 70, 70);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.divInformativoDois h1{
+	padding-top: 10px;
+	font-size: 30px;
+	height: 15%;
+}
+
+.divInformativoDois #divLista{
+	padding-top: 10px;
+	text-align: left;
+	overflow: auto;
+	font-size: 16px;
+	width: 100%;
+	height: 75%;
+	/*Estilizando a barra de rolagem no firefox*/
+	scrollbar-width: thin;          /* "auto" or "thin" */
+	scrollbar-color: rgba(119, 119, 179, 0.705) rgba(0, 0, 0, 0.705);   /* scroll thumb and track */
+}
+
+.divInformativoDois #divButton{
+	height: 10%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.795);
+}
+
+.divInformativoDois #divButton form{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.divInformativoDois #divButton button{
+	height: 100%;
+	width: 30%;
+}
+
+.divInformativoDois div ul{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.divInformativoDois div li{
+	/* superior | direita | inferior | esquerda */
+	margin: 3px 0px 3px 0px;
+	border-bottom: solid white 1px;
+}
+
+/*Estilizando a barra de rolagem no Chrome, Edge e Safari*/
+.divInformativoDois div::-webkit-scrollbar {
+	width: 8px;               /* width of the entire scrollbar */
+}
+
+.divInformativoDois div::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.705);        /* color of the tracking area */
+}
+
+.divInformativoDois div::-webkit-scrollbar-thumb {
+	background-color: rgba(119, 119, 179, 0.705);    /* color of the scroll thumb */
+}
+
+#divBuscaList{
+	color: white;
+	width: 100%;
+	height: 5%;
+	display: flex;
+	justify-content: end;
+	margin-top: 5px;
+	font-size: 22px;
+}
+#divBuscaList input{
+	width: 300px;
+	height: 20px;
+	margin-right: 30px;
+	margin-left: 5px;
+	text-align: center;
+}

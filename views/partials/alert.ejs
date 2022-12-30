@@ -1,0 +1,14 @@
+<div id="divAlert" class="alertStatus<%=statusErro%>">
+    <div id="headerAlert"><button id="buttonEndAlert"><i class="fa-solid fa-x"></i></button></div>
+    <div id="bodyAlert">
+        <%if (typeof textError !== "undefined") {%>
+            <h2><%=textError%></h2>
+        <%}%>
+    </div>
+    <div id="footerAlert"><h1>Atenção</h1></div>
+</div>
+
+<script type="text/javascript" src="../js/alert/alertScript.js"></script>
+</body>
+
+</html>

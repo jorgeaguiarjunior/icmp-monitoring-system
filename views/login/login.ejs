@@ -1,0 +1,27 @@
+<%-include("../partials/head")%>
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login/loginstyle.css">
+</head>
+
+<body>
+    <div id="div-main">
+        <div id="bem-vindo">
+            <h1>Bem Vindo ao Ping Monitor</h1>
+            <h2>Monitore o funcionamento de seus equipamentos com facilidade e agilidade!</h2>
+        </div>
+        <div id="login">
+            <h1>Login</h1>
+            <form action="/login" method="post" id="form-login">
+                <input type="text" id="username" name="username" placeholder="Usuario" required>
+
+                <input type="password" id="password" name="password" placeholder="Senha" required>
+
+                <button id="entrar">Entrar</button>
+            </form>
+            <!-- <a href="/register" class="linkNovoUsuario">Cadastrar Novo Usuario</a> -->
+            <p>Para o primeiro acesso, utilize o usuario e senha "root"</p>
+        </div>
+    </div>
+</body>
+
+</html>

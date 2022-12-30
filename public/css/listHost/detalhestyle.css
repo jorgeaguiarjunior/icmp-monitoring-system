@@ -1,0 +1,132 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-image: url("/images/Vector_2646.jpg");
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#divBody{
+    width: 100vw;
+    height: 100vh;
+	min-height: 540px;
+	min-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#divJanela{
+    width: 80%;
+	height: 90%;
+	background-color: rgba(0, 0, 0, 0.705);
+    box-shadow: 3px 3px 1em rgb(70, 70, 70);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    color: white;
+	font-size: 25px;
+
+}
+
+#divJanela h1{
+	height: 10%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.795);
+	display: flex;
+	text-align: center;
+    align-items: center;
+	justify-content: center;
+}
+
+#dadosPOP{
+	height: 40%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	border-bottom: 1px solid black;
+}
+
+#dadosPOP p{
+	margin-top: 40px;
+	font-size: 40px;
+}
+
+#divInformativos{
+	height: 40%;
+	width: 100%;
+	display: flex;
+	justify-content: column;
+	text-align: center;
+}
+
+.dadosLista{
+	width: 50%;
+	height: 100%;
+}
+
+.tituloLista{
+	background-color: rgba(0, 0, 0, 0.795);
+	height: 20%;
+	display: flex;
+	text-align: center;
+    align-items: center;
+	justify-content: center;
+}
+
+.corpoLista ul{
+	text-align: left;
+	font-size: 20px;
+	border-left: 2px solid black;
+	padding-left: 30px;
+	height: 100%;
+}
+
+.corpoLista ul li{
+	margin: 0px 0px 3px 0px;
+	border-bottom: solid white 1px;
+}
+
+.corpoLista{
+	height: 80%;
+	overflow: auto;
+	/*Estilizando a barra de rolagem no firefox*/
+	scrollbar-width: thin;          /* "auto" or "thin" */
+	scrollbar-color: rgba(119, 119, 179, 0.705) rgba(0, 0, 0, 0.705);   /* scroll thumb and track */
+}
+
+/*Estilizando a barra de rolagem no Chrome, Edge e Safari*/
+.corpoLista::-webkit-scrollbar {
+	width: 8px;               /* width of the entire scrollbar */
+}
+
+.corpoLista::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.705);        /* color of the tracking area */
+}
+
+.corpoLista::-webkit-scrollbar-thumb {
+	background-color: rgba(119, 119, 179, 0.705);    /* color of the scroll thumb */
+}
+
+#divButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.795);
+}
+
+#divButtons button{
+    width: 100px;
+    height: 40px;
+	margin: 5px;
+}

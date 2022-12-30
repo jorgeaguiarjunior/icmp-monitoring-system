@@ -1,0 +1,29 @@
+
+<%-include("../partials/head")%>        
+    <link rel="stylesheet" type="text/css" href="/css/listHost/newstyle.css">
+    <link rel="stylesheet" href="/css/navbar/navbarstyle.css">
+    <title>List</title>
+</head>
+
+<body>
+    <%-include("../partials/navbar")%>
+    
+        <div id="bodyDetalhe">
+            <form action="/list/add" method="POST" id="formAdicionarNovo">
+                <h1>Adicionar Filhos</h1>
+                <div id="inputsDados">
+                    <label for="ipPai">
+                        <p>IP Pai</p>
+                        <input type="text" name="ipPai" id="ipPai" value="<%=pai.ip%>" readonly>
+                        <input type="hidden" name="idPai" id="idPai" value="<%=pai._id%>" readonly>
+                    </label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome Filho" required>      
+                    <input type="text" name="ip" id="ip" placeholder="IP Filho" minlength="7" maxlength="15" size="15" pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" required>
+                </div>
+                <div id="divButtons">
+                    <button>Salvar</button>
+                </div>
+            </form>
+        </div>
+
+        <%-include("../partials/alert")%>

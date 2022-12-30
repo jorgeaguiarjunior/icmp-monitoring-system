@@ -1,0 +1,27 @@
+<%-include("../partials/head")%>        
+    <link rel="stylesheet" type="text/css" href="/css/listHost/newstyle.css">
+    <link rel="stylesheet" href="/css/navbar/navbarstyle.css">
+    <title>List</title>
+</head>
+
+<body>
+    <%-include("../partials/navbar")%>
+    
+        <div id="bodyDetalhe">
+            <%if(host){%>    
+                <form action="/detalhe/<%=host._id%>?_method=PUT" method="post" id="formAdicionarNovo">
+                    <h1>Editar</h1>
+                    <div id="inputsDados">
+                        <input type="text" name="nome" id="nome" value="<%=host.nome%>" required>
+                        <input type="text" name="ip" id="ip" value="<%=host.ip%>" minlength="7" maxlength="15" size="15" pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" required>
+                    </div>
+                    <div id="divButtons">
+                        <button>Salvar</button>
+                    </div>
+                </form>
+            <%}else{%>
+                <h1>Nenhum resultado encontrado</h1>
+            <%}%>
+        </div>
+        
+        <%-include("../partials/alert")%>

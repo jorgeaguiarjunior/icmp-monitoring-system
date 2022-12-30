@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*Corpo da minha janela de configuração*/
+#bodyConfig {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: url("/images/Vector_2646.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*Div contendo os formularios de criação e atualização de usuario*/
+#updateCreate {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+/*Div contendo o formulario de atualização de usuario*/
+.divForm {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divFormLimited {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-inputs{
+    display: flex;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.inputConfigRadio{
+    width: 150px;
+    height: 25px;
+}
+
+/*Div da minha tabela de usuarios*/
+#tableUser {
+    height: 70%;
+    width: 60%;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 10px;
+    box-shadow: 3px 3px 1em rgb(70, 70, 70);
+    background-color: rgba(0, 0, 0, 0.705);
+}
+
+/*Cabeçalho da minha tabela*/
+.headerTabela {
+    height: 20%;
+    width: 100%;
+    background-color: #03111E;
+    color: white;
+}
+
+/*Input de busca de usuarios*/
+#inputBusca {
+    width: 100%;
+    height: 5%;
+    border: none;
+    text-align: center;
+}
+
+/*Div que contem o corpo da minha tabela, é necessário colocar em uma div para ter o overflow*/
+#divBodyTabela {
+    width: 100%;
+    height: 75%;
+    overflow-y: auto;
+    /*Ocultando a barra de rolagem pelo firefox*/
+    scrollbar-width: none
+}
+
+/*Ocultando a barra de rolagem em outros navegadores*/
+#divBodyTabela::-webkit-scrollbar {
+    display: none;
+}
+
+/*Corpo da minha tabela, é necessário deixar tudo 100% pois ela está dentro de uma div que já está com as dimensões corrigidas*/
+.bodyTabela {
+    width: 100%;
+    font-weight: bold
+}
+
+.bodyTabela a {
+    color: #03111E;
+}
+
+.bodyTabela a:hover {
+    color: #5400f0;
+}
+
+/*Adicionando borda nos itens da tabela*/
+.bodyTabela td {
+    margin: 10px 30px 0px 30px;
+	padding: 5px 0px 5px 0px;
+    background: rgb(211, 211, 211);
+}
+
+/*Zebrando a tabela:
+.bodyTabela tr:nth-child(even) {
+    background: lightgray;
+}
+
+.bodyTabela tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+Fim do Zebrando a tabela:*/
+
+/*Todas as colunas: */
+.colunaID {
+    width: 10%;
+}
+
+.colunaNome {
+    width: 25%;
+}
+
+.colunaTelefone {
+    width: 20%;
+}
+
+.colunaEmail {
+    width: 35%;
+}
+
+.colunaDeletar {
+    width: 10%;
+}
+
+/*Fim de Todas as colunas: */
+
+.formularioConfig {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.705);
+    height: 350px;
+    width: 500px;
+    justify-content: center;
+    box-shadow: 3px 3px 1em rgb(70, 70, 70);
+    color: white;
+}
+
+.formularioConfig .inputConfig {
+    width: 400px;
+    height: 25px;
+    text-align: center;
+    margin-top: 7px;
+    border-radius: 30px;
+    border: none;
+    transition: 0.5s;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.formularioConfig .inputConfig:hover {
+    width: 420px;
+}
+
+.formularioConfig button {
+    margin-top: 10px;
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.formularioConfig button:hover {
+    width: 110px;
+}
+
+
+
+/* CSS DO ALERTA */
+#divAlert{
+    display: none;
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    background-color: #03111E;
+    color: white;
+    box-shadow: 3px 3px 1em rgb(70, 70, 70);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#headerAlert{
+    height: 10%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.795);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#headerAlert button{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+#bodyAlert{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background-color: white; */
+}
+
+#footerAlert{
+    height: 10%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.795);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CSS DO ALERTA */

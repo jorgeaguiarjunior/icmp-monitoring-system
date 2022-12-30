@@ -1,0 +1,95 @@
+<%-include("../partials/head")%>        
+    <link rel="stylesheet" type="text/css" href="../css/home/homestyle.css">
+    <title>List</title>
+</head>
+
+<body>
+<%-include("../partials/navbar")%>
+
+<div id="body-home">
+    <div id="dashboard-home">
+        <div id="status-amount">
+            <div id="total-amount" class="box-status">
+                <div class="icon-number">
+                    <div class="div-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="div-number">
+                        <span id="total-amount-number"><%=quantidade%></span>
+                    </div>
+                </div>
+                <div class="descriptive-text">
+                    <span>Quantidade total</span>
+                </div>
+            </div>
+
+            <div class="space-box-status"></div>
+
+            <div id="status-online" class="box-status">
+                <div class="icon-number">
+                    <div class="div-icon">
+                        <i class="fas fa-link conAtivas"></i>
+                    </div>
+                    <div class="div-number">
+                        <span id="status-online-number">?</span>
+                    </div>
+                </div>
+                <div class="descriptive-text">
+                    <span>Onlines</span>
+                </div>
+            </div>
+
+            <div class="space-box-status"></div>
+
+            <div id="status-offline" class="box-status">
+                <div class="icon-number">
+                    <div class="div-icon">
+                        <i class="fas fa-unlink"></i>
+                    </div>
+                    <div class="div-number">
+                        <span id="status-offline-number">?</span>
+                    </div>
+                </div>
+                <div class="descriptive-text">
+                    <span>Offlines</span>
+                </div>
+            </div>
+        </div>
+        <div id="informative-lists">
+            <div id="div-registration-list" class="informative-box">
+                <div class="title-informative-box">
+                    <span>Log de cadastros</span>
+                </div>
+                <ul id="registration-list">
+                    <% if(logCadastros.length > 0){ %> 
+                        <%for(let i = 0; i < logCadastros.length; i++){%>
+                            <li><span class="nomeUser">Usuario <%=logCadastros[i].userName%></span><span class="tipoLog"><%=logCadastros[i].tipoLog%></span> <span class="popLog"><%=logCadastros[i].nomePopLog%></span> <span class="ipLog">IP: <%=logCadastros[i].ipLog%></span> <span class="dataLog">Horário: <%=logCadastros[i].dataLog%></span></li>
+                        <%}%>
+                    <%}%>
+                </ul>
+            </div>
+
+            <div class="space-informative-lists"></div>
+
+            <div id="div-status-list" class="informative-box">
+                <div class="title-informative-box">
+                    <span>Resumo das conexões</span>
+                </div>
+                <div id="list-itens-connections">
+                    <div id="grid-container-connections">
+                        <%for (let index = 0; index < hosts.length; index++) {%>
+                            <%if (hosts.length > 0) {%>
+                                <div class="grid-item-connections item-online"></div>
+                            <%}%>
+                        <%}%>
+                        <!-- <div class="grid-item-connections item-offline"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/home/homescript.js"></script>
+</body>
+
+</html>
